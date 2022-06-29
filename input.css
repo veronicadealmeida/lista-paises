@@ -1,0 +1,78 @@
+body {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+body .mainTittle {
+  text-align: center;
+}
+body .countryList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+body .countryList #countryList_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+body .countryList #countryList_ul .countryCard {
+  border: 2px solid #bdb7b7;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 200px;
+  margin: 10px;
+  padding: 10px;
+  perspective: 1000px;
+  background-color: transparent;
+}
+body .countryList #countryList_ul .countryCard.Africa {
+  background-color: lightgreen;
+}
+body .countryList #countryList_ul .countryCard.Americas {
+  background-color: lightyellow;
+}
+body .countryList #countryList_ul .countryCard.Asia {
+  background-color: #ffcccb;
+}
+body .countryList #countryList_ul .countryCard.Europe {
+  background-color: lavender;
+}
+body .countryList #countryList_ul .countryCard.Oceania {
+  background-color: lightblue;
+}
+body .countryList #countryList_ul .countryCard.Polar {
+  background-color: #e67a15;
+}
+body .countryList #countryList_ul .countryCard.Antarctic-Ocean {
+  background-color: #8d1caf;
+}
+body .countryList #countryList_ul .countryCard .countryCard__flag {
+  width: 300px;
+  height: 200px;
+}
+body .countryList #countryList_ul .countryCard:hover .countryCard__flip-card-inner {
+  transform: rotateY(180deg);
+}
+body .countryList #countryList_ul .countryCard .countryCard__flip-card-inner {
+  transition: transform 0.8s;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+body .countryList #countryList_ul .countryCard .countryCard__flip-card-front, body .countryList #countryList_ul .countryCard .countryCard__flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+body .countryList #countryList_ul .countryCard .countryCard__flip-card-back {
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=input.css.map */

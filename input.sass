@@ -1,0 +1,79 @@
+$color-africa: lightgreen
+$color-americas: lightyellow
+$color-asia: #ffcccb
+$color-europe: lavender
+$color-oceania: lightblue
+
+body
+    max-width: 1440px
+    margin: 0 auto
+
+    .mainTittle
+        text-align: center
+
+    .countryList
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+
+        #countryList_ul
+            list-style-type: none
+            margin: 0
+            padding: 0
+            display: flex
+            flex-flow: row wrap
+            justify-content: center
+
+            .countryCard
+                border: 2px solid #bdb7b7
+                border-radius: 10px
+                width: 100%
+                max-width: 300px
+                height: 100%
+                max-height: 200px
+                margin: 10px
+                padding: 10px
+                perspective: 1000px
+                background-color: transparent
+                cursor: grab
+            
+                &.Africa
+                    background-color: $color-africa
+                &.Americas
+                    background-color: $color-americas
+                &.Asia
+                    background-color: $color-asia
+                &.Europe
+                    background-color: $color-europe
+
+                &.Oceania
+                    background-color: $color-oceania
+                &.Polar
+                    background-color: #e67a15
+                &.Antarctic-Ocean
+                    background-color: #8d1caf
+
+                .countryCard__flag
+                    width: 300px
+                    height: 200px
+
+                &:hover .countryCard__flip-card-inner
+                    transform: rotateY(180deg)
+
+                .countryCard__flip-card-inner
+                    transition: transform 0.8s
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    text-align: center
+                    transform-style: preserve-3d
+
+                .countryCard__flip-card-front, .countryCard__flip-card-back
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    -webkit-backface-visibility: hidden
+                    backface-visibility: hidden
+
+                .countryCard__flip-card-back
+                    transform: rotateY(180deg)
